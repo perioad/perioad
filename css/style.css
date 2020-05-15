@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  background-color: black; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+  color: #102415; }
+
+@keyframes header-background-animation {
+  0% {
+    clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0, 50% 100%); }
+  50% {
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 50% 100%); }
+  100% {
+    clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%); } }
+
+.header {
+  height: 95vh;
+  position: relative; }
+  .header__background {
+    height: 95vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ff8741;
+    clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%);
+    animation: header-background-animation 1.4s linear .4s;
+    animation-fill-mode: backwards; }
