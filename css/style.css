@@ -13,9 +13,16 @@ body {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
   line-height: 1.7;
   color: #102415; }
+
+.header {
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+.myself {
+  font-size: 3.2rem; }
 
 @keyframes header-background-animation {
   0% {
@@ -25,16 +32,63 @@ body {
   100% {
     clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%); } }
 
+@keyframes header-arrow-animation {
+  0% {
+    transform: translateY(-5%); }
+  100% {
+    transform: translateY(10%); } }
+
+@keyframes header-appear-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.myself {
+  width: 35rem;
+  height: 35rem;
+  margin-top: 10rem;
+  position: relative;
+  animation: header-appear-animation .4s ease-out .6s;
+  animation-fill-mode: backwards; }
+  .myself__photo {
+    height: 100%;
+    border: 2rem solid #000;
+    border-bottom: 6rem solid #000;
+    border-radius: 3px;
+    box-shadow: inset 0 0 2rem -2rem rgba(0, 0, 0, 0.9); }
+  .myself__caption {
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #ffaa78;
+    text-align: center; }
+
 .header {
   height: 95vh;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; }
   .header__background {
     height: 95vh;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     background-color: #ff8741;
     clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%);
-    animation: header-background-animation 1.4s linear .4s;
+    animation: header-background-animation 1.4s ease .4s;
     animation-fill-mode: backwards; }
+  .header__scroll {
+    font-size: 1.4rem;
+    animation: header-appear-animation .4s ease-out 1.4s backwards; }
+  .header__arrow {
+    display: block;
+    font-size: 6rem;
+    animation: header-arrow-animation 2s ease-in-out infinite alternate; }

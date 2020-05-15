@@ -1,6 +1,11 @@
 .header {
   height: 95vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   
   &__background {
     height: 95vh;
@@ -8,10 +13,24 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     background-color: $color-primary;
     clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%);
 
-    animation: header-background-animation 1.4s linear .4s;
+    animation: header-background-animation 1.4s ease .4s;
     animation-fill-mode: backwards;
+  }
+
+  &__scroll {
+    font-size: 1.4rem;
+
+    animation: header-appear-animation .4s ease-out 1.4s backwards;
+  }
+
+  &__arrow {
+    display: block;
+    font-size: 6rem;
+
+    animation: header-arrow-animation 2s ease-in-out infinite alternate;
   }
 }
