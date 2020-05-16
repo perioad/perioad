@@ -92,7 +92,7 @@ body {
     color: #ffaa78;
     text-align: center; }
   .myself__link {
-    color: inherit;
+    color: #5a5a5a;
     line-height: 1; }
     .myself__link:not(:last-child) {
       margin-right: 3rem; }
