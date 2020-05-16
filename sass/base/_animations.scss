@@ -2,11 +2,11 @@
   0% {
     clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0, 50% 100%);
   }
-  50% {
+  40% {
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 50% 100%);
   }
   100% {
-    clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%);
+    clip-path: polygon(0 65%, 0 0, 100% 0, 100% 65%, 50% 100%);
   }
 }
 
@@ -15,15 +15,52 @@
     transform: translateY(-5%);
   }
   100% {
-    transform: translateY(10%);
+    transform: translateY(20%);
+  }
+}
+
+@keyframes header-shadow-animation {
+  0% {
+    opacity: 0;
+    box-shadow: 0 -.5rem 1rem .1rem rgba($color-black, .15);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 -.5rem 1rem .1rem rgba($color-black, 1);
   }
 }
 
 @keyframes header-appear-animation {
   0% {
     opacity: 0;
+    transform: translateY(-10rem);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-greeting-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem) scale(.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes myself-social-animation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(30);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
   }
 }

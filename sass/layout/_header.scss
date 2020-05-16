@@ -6,25 +6,26 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  
-  &__background {
-    height: 95vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: $color-primary;
-    clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 100%);
 
-    animation: header-background-animation 1.4s ease .4s;
-    animation-fill-mode: backwards;
+  &__greeting {
+    margin-top: 3rem;
+
+    animation: header-greeting-animation .4s ease-out 2s backwards;
   }
 
-  &__scroll {
+  &__see-more {
     font-size: 1.4rem;
 
-    animation: header-appear-animation .4s ease-out 1.4s backwards;
+    animation: header-appear-animation .4s ease-out .8s backwards;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 3rem;
+      background: transparent;
+
+      animation: header-shadow-animation 2s ease-in-out infinite alternate;
+    }
   }
 
   &__arrow {
@@ -32,5 +33,18 @@
     font-size: 6rem;
 
     animation: header-arrow-animation 2s ease-in-out infinite alternate;
+  }
+
+  &__background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $color-primary;
+    clip-path: polygon(0 65%, 0 0, 100% 0, 100% 65%, 50% 100%);
+
+    animation: header-background-animation 1.2s ease .4s backwards;
   }
 }

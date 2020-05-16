@@ -1,18 +1,16 @@
 .myself {
   width: 35rem;
   height: 35rem;
-  margin-top: 10rem;
   position: relative;
   
-  animation: header-appear-animation .4s ease-out .6s;
-  animation-fill-mode: backwards;
+  animation: header-appear-animation .4s ease-out .5s backwards;
   
   &__photo {
     height: 100%;
     border: 2rem solid $color-black;
     border-bottom: 6rem solid $color-black;
     border-radius: $border-radius;
-    box-shadow: inset 0 0 2rem -2rem rgba($color-black, .9);
+    box-shadow: 0 1rem 1rem rgba($color-black, .15);
   }
 
   &__caption {
@@ -23,5 +21,44 @@
     transform: translate(-50%, 0%);
     color: $color-primary-light;
     text-align: center;
+  }
+
+  &__link {
+    color: inherit;
+    line-height: 1;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    &:link,
+    &:visited {
+
+    }
+
+    &:focus {
+      outline: none;
+      color: $color-primary;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  &__social {
+    transition: all .2s;
+
+    animation: myself-social-animation 1s ease-in-out 1.4s backwards;
+
+    &:hover {
+      color: $color-primary;
+      transform: scale(1.1);
+    }
+    
+    &:active {
+      transform: scale(1.05);
+      border-bottom: none;
+    }
   }
 }
