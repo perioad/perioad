@@ -43,7 +43,6 @@
     left: 0;
     z-index: -1;
     background-color: $color-primary;
-    clip-path: polygon(0 65%, 0 0, 100% 0, 100% 65%, 50% 100%);
 
     animation: header-background-animation 1.2s ease .4s backwards;
   }

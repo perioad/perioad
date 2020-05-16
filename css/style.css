@@ -30,7 +30,7 @@ body {
   40% {
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 50% 100%); }
   100% {
-    clip-path: polygon(0 65%, 0 0, 100% 0, 100% 65%, 50% 100%); } }
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%, 50% 100%); } }
 
 @keyframes header-arrow-animation {
   0% {
@@ -57,7 +57,7 @@ body {
 @keyframes header-greeting-animation {
   0% {
     opacity: 0;
-    transform: translateY(20rem) scale(0.5); }
+    transform: translateY(10rem) scale(0); }
   100% {
     opacity: 1;
     transform: translateY(0) scale(1); } }
@@ -82,7 +82,7 @@ body {
     border: 2rem solid #000;
     border-bottom: 6rem solid #000;
     border-radius: 3px;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.15); }
   .myself__caption {
     width: inherit;
     position: absolute;
@@ -143,5 +143,4 @@ body {
     left: 0;
     z-index: -1;
     background-color: #ff8741;
-    clip-path: polygon(0 65%, 0 0, 100% 0, 100% 65%, 50% 100%);
     animation: header-background-animation 1.2s ease .4s backwards; }
