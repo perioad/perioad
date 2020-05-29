@@ -1,0 +1,47 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  height: 50rem;
+  margin: 5%;
+  text-align: center;
+  background-color: $color-primary;
+  border-radius: $border-radius;
+  cursor: pointer;
+  box-shadow: 0 0 2rem 2rem rgba($color-primary, 1);
+  color: rgba($color-black, 0);
+
+  transition: all .4s ease-in-out;
+  
+  &__title {
+    padding: 1rem 0;
+  }
+  
+  &__image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  
+  &__image {
+    width: 100%;
+    filter: blur(.5rem);
+    
+    transition: all .4s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba($color-primary, 1);
+    color: $color-black;
+  }
+  
+  &:hover &__image,
+  &:focus &__image {
+    filter: blur(0);
+  }
+}

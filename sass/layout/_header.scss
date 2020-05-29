@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,8 @@
     left: 0;
     z-index: -1;
     background-color: $color-primary;
+    box-shadow: 0 0 1rem 1rem $color-primary;
+
 
     animation: header-background-animation 1.2s ease .4s backwards;
   }

@@ -5,10 +5,25 @@ body {
 }
 
 .header {
-  font-size: $font-size-default;
+  font-size: $font-size-main-header;
   text-transform: uppercase;
 }
 
 .myself {
   font-size: 3.2rem;
+}
+
+.project-card {
+  &__title {
+    font-size: $font-size-sub-header;
+    text-transform: uppercase;
+  }
+}
+
+.technologies {
+  font-size: $font-size-default;
+  
+  &__header {
+    text-transform: uppercase;
+  }
 }
