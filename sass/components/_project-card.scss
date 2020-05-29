@@ -7,6 +7,7 @@
   height: 50rem;
   margin: 5%;
   text-align: center;
+  text-decoration: none;
   background-color: $color-primary;
   border-radius: $border-radius;
   cursor: pointer;
@@ -19,7 +20,7 @@
     padding: 1rem 0;
   }
   
-  &__image-link {
+  &__image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +37,7 @@
   &:hover,
   &:focus {
     transform: scale(1.1);
-    box-shadow: 0 0 2rem rgba($color-primary, 1);
+    box-shadow: 0 0 4rem 1rem rgba($color-primary, 1);
     color: $color-black;
   }
   
