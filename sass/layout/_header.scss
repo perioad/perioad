@@ -47,5 +47,9 @@
 
 
     animation: header-background-animation 1.2s ease .4s backwards;
+
+    @media screen and (max-width: 600px) {
+      animation: header-background-animation 1.2s ease backwards;
+    }
   }
 }

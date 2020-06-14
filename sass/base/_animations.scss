@@ -64,3 +64,12 @@
     transform: scale(1);
   }
 }
+
+@keyframes project-card-show-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -11,11 +11,12 @@
   background-color: $color-primary;
   border-radius: $border-radius;
   cursor: pointer;
-  box-shadow: 0 0 2rem 2rem rgba($color-primary, 1);
+  box-shadow: 0 0 1rem 1rem rgba($color-primary, 1);
   color: rgba($color-black, 0);
 
   transition: all .4s ease-in-out;
-  
+  animation: project-card-show-animation 1s ease-in-out 1.8s backwards;
+
   &__title {
     padding: 1rem 0;
   }
@@ -37,7 +38,7 @@
   &:hover,
   &:focus {
     transform: scale(1.1);
-    box-shadow: 0 0 4rem 1rem rgba($color-primary, 1);
+    box-shadow: none;
     color: $color-black;
   }
   
