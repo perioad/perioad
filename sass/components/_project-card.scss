@@ -17,6 +17,10 @@
   transition: all .4s ease-in-out;
   animation: project-card-show-animation 1s ease-in-out 1.8s backwards;
 
+  @media screen and (max-width: 600px) {
+    color: $color-black;
+  }
+
   &__title {
     padding: 1rem 0;
   }
@@ -33,6 +37,10 @@
     filter: blur(.5rem);
     
     transition: all .4s ease-in-out;
+
+    @media screen and (max-width: 600px) {
+      filter: none;
+    }
   }
 
   &:hover,

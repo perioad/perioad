@@ -143,6 +143,9 @@ body {
   color: rgba(0, 0, 0, 0);
   transition: all .4s ease-in-out;
   animation: project-card-show-animation 1s ease-in-out 1.8s backwards; }
+  @media screen and (max-width: 600px) {
+    .project-card {
+      color: #000; } }
   .project-card__title {
     padding: 1rem 0; }
   .project-card__image-container {
@@ -154,6 +157,9 @@ body {
     width: 100%;
     filter: blur(0.5rem);
     transition: all .4s ease-in-out; }
+    @media screen and (max-width: 600px) {
+      .project-card__image {
+        filter: none; } }
   .project-card:hover, .project-card:focus {
     transform: scale(1.1);
     box-shadow: none;
