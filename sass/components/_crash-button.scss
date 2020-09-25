@@ -1,0 +1,43 @@
+.crash-button {
+  position: relative;
+  height: 5rem;
+  width: 20rem;
+  z-index: 1;
+  display: none;
+
+  &__first-piece,
+  &__second-piece,
+  &__third-piece,
+  &__fourth-piece {
+    position: absolute;
+    height: 5rem;
+    width: 20rem;
+    background: $color-secondary-dark;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+  }
+
+  &__first-piece {
+    clip-path: polygon(0 0, 30% 0, 0 100%);
+    animation: button-first-piece-animation 3s forwards;
+  }
+
+  &__second-piece {
+    clip-path: polygon(30% 0, 60% 0, 45% 100%, 0 100%);
+    animation: button-second-piece-animation 3s forwards;
+  }
+
+  &__third-piece {
+    clip-path: polygon(60% 0, 100% 60%, 100% 100%, 45% 100%);
+    animation: button-third-piece-animation 3s forwards;
+  }
+  
+  &__fourth-piece {
+    clip-path: polygon(60% 0, 100% 0, 100% 60%);
+    animation: button-fourth-piece-animation 3s forwards;
+  }
+}

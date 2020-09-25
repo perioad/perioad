@@ -10,10 +10,24 @@
     </head>
     <body>
       <header class="header">
-        
+        <button class="button">Press me</button>
+        <div class="crash-button">
+          <div class="crash-button__first-piece">Press me</div>
+          <div class="crash-button__second-piece">Press me</div>
+          <div class="crash-button__third-piece">Press me</div>
+          <div class="crash-button__fourth-piece">Press me</div>
+        </div>
       </header>
       <main class="main">
         
       </main>
+      <script>
+        const btn = document.querySelector('.button');
+        const crashBtn = document.querySelector('.crash-button');
+        btn.addEventListener('click', () => {
+          btn.classList.add('hide');
+          crashBtn.classList.add('show');
+        });
+      </script>
     </body>
     </html>
